@@ -1,0 +1,22 @@
+# byte-compiled
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ide
+**.idea**
+**.vscode**
+.editorconfig
+
+# files
+*.env
+readme.md
+Makefile
+.gitignore
+.gitattributes
+.dockerignore
+
+# folders
+configs
+volumes
+dockerfiles
