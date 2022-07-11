@@ -53,9 +53,6 @@ async def events_reader(channel: aioredis.client.PubSub):
                         .where(bets_model.c.event_uuid == record["uuid"])
                     )
                     logger.info(f"Update record: {resource}")
-                    if message["data"].decode() == "STOP":
-                        logger.info("(Reader) STOP")
-                        break
                 await asyncio.sleep(0.01)
         except asyncio.TimeoutError:
             pass

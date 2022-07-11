@@ -10,9 +10,7 @@ class EventView:
     @staticmethod
     async def get(params: Params = Depends()):
         if resources := await get_events():
-            logger.info(f"resources {resources}")
             events = [Event(**resource) for resource in resources]
-            logger.info(events)
             return paginate(events, params)
 
         raise HTTPException(status_code=404, detail="Events not found")
