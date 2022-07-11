@@ -25,6 +25,7 @@ router.add_api_route(
     "/bet",
     bet_view.post,
     methods=["POST"],
+    status_code=201,
     summary="Сделать ставку на событие",
     responses=response_201,
 )
