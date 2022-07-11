@@ -38,3 +38,11 @@ make migrate service=line-provider
 {
   "state": "finished_win"
 }
+
+Статусы:
+
+new
+
+finished_win
+
+finished_lose
